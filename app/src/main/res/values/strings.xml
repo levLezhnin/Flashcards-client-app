@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Flashcards\u00A0</string>
+    <string name="new_category">Новая категория</string>
+    <string name="category_name">Название</string>
+    <string name="add_new_category">Добавить новую категорию</string>
+    <string name="new_theme">Новая тема</string>
+    <string name="theme_name">Название</string>
+    <string name="add_new_theme">Добавить новую тему</string>
+    <string name="category">Категория</string>
+    <string name="new_card">Новая карточка</string>
+    <string name="word_to_remember">Слово</string>
+    <string name="word_definition">Перевод</string>
+    <string name="add_new_card">Добавить новую карточку</string>
+    <string name="theme">Тема</string>
+    <string name="change_card">Изменить карточку</string>
+    <string name="accept">Применить</string>
+    <string name="change_theme">Изменить тему</string>
+    <string name="registration">Регистрация</string>
+    <string name="nickname">Имя</string>
+    <string name="email">Email</string>
+    <string name="password">Пароль</string>
+    <string name="sign_up">Регистрация</string>
+    <string name="sign_in">Войти</string>
+    <string name="title_activity_cards">CardsActivity</string>
+
+    <string name="title_activity_cards_in_theme">CardsInThemeActivity</string>
+    <string name="your_favourite_categories">Любимые категории</string>
+    <string name="themes_in_chosen_category">Темы в категории</string>
+    <string name="title_activity_learning">LearningActivity</string>
+    <string name="find_new_categories">Новые категории</string>
+    <string name="your_categories">Любимые категории</string>
+    <string name="welcome_to_flashcards">Добро пожаловать в Flashcards!</string>
+    <string name="login">Войти</string>
+    <string name="cards_in_theme">Карточки в теме</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_user_themes">UserThemesActivity</string>
+
+    <string name="your_themes">Мои темы</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="profile">Профиль</string>
+    <string name="quit">Выход</string>
+</resources>

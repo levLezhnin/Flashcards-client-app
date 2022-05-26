@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/user"
+        android:title=""
+        android:enabled="false">
+    </item>
+    <item
+        android:id="@+id/favourite_categories"
+        android:title="@string/your_categories"
+        android:icon="@drawable/heart"
+        android:iconTint="@color/white">
+    </item>
+
+    <item
+        android:id="@+id/created_themes"
+        android:title="@string/your_themes"
+        android:icon="@drawable/is_user_a_author"
+        android:iconTint="@color/white"
+        >
+    </item>
+
+    <item
+        android:id="@+id/quit"
+        android:title="@string/quit"
+        android:icon="@drawable/sign_out"
+        android:iconTint="@color/white"/>
+
+</menu>

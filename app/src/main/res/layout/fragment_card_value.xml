@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CardValueFragment"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/card_value"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="Hello value fragment"
+        android:fontFamily="sans-serif"
+        android:textSize="30sp"
+        android:autoSizeTextType="uniform"/>
+
+</FrameLayout>

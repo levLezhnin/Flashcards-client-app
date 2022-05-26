@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context="fragments.ChangeCardFragment"
+    android:background="@drawable/background_design">
+
+    <TextView
+        android:text="@string/change_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="45sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/alata"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="20dp"
+        android:shadowColor="@color/black"
+        android:shadowDy="2"
+        android:shadowDx="2"
+        android:shadowRadius="2"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/word_to_remember"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:shadowColor="@color/black"
+        android:shadowDy="2"
+        android:shadowDx="2"
+        android:shadowRadius="2"/>
+
+    <EditText
+        android:id="@+id/et_card_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:background="@drawable/edit_text_design"
+        android:padding="10dp"
+        android:textCursorDrawable="@drawable/edit_text_cursor"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/word_definition"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:shadowColor="@color/black"
+        android:shadowDy="2"
+        android:shadowDx="2"
+        android:shadowRadius="2"/>
+
+    <EditText
+        android:id="@+id/et_card_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:background="@drawable/edit_text_design"
+        android:padding="10dp"
+        android:textCursorDrawable="@drawable/edit_text_cursor"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_change_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="@string/accept"
+        android:textColor="#436CA8"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:fontFamily="@font/alata"
+        android:shadowColor="@color/black"
+        android:shadowDy="2"
+        android:shadowDx="2"
+        android:shadowRadius="2"
+        android:background="@drawable/button_design"/>
+
+
+
+</LinearLayout>
