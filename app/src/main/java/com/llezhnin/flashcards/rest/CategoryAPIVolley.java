@@ -77,13 +77,15 @@ public class CategoryAPIVolley implements CategoryAPI {
 
         boolean isCategoryIdNew = true;
 
+        NoDB.CATEGORIES.clear();
+        new FlashcardsAPIVolley(context).fill();
+
         for (Category c : NoDB.CATEGORIES) {
             if(c.getId() == category_id) {
                 isCategoryIdNew = false;
                 break;
             }
         }
-
         if(isCategoryIdNew) {
 
             RequestQueue requestQueue = Volley.newRequestQueue(context);
