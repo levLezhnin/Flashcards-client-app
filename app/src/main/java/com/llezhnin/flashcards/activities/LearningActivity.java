@@ -13,6 +13,7 @@ import com.llezhnin.flashcards.fragments.CardValueFragment;
 import com.llezhnin.flashcards.nodb.NoDB;
 
 import java.text.MessageFormat;
+import java.util.Collections;
 
 public class LearningActivity extends AppCompatActivity {
 
@@ -30,6 +31,8 @@ public class LearningActivity extends AppCompatActivity {
         frameLayout = findViewById(R.id.layout_to_place_cards);
         tv_progress = findViewById(R.id.text);
 
+        Collections.shuffle(NoDB.CARDS);
+
         CardKeyFragment.CURRENT_CARD = CURRENT_CARD;
         CardValueFragment.CURRENT_CARD = CURRENT_CARD;
         setTVProgress(CURRENT_CARD);
@@ -43,6 +46,7 @@ public class LearningActivity extends AppCompatActivity {
                 CURRENT_CARD++;
                 if(CURRENT_CARD >= NoDB.CARDS.size()) {
                     CURRENT_CARD = 0;
+                    Collections.shuffle(NoDB.CARDS);
                 }
                 CardKeyFragment.CURRENT_CARD = CURRENT_CARD;
                 CardValueFragment.CURRENT_CARD = CURRENT_CARD;
@@ -57,6 +61,7 @@ public class LearningActivity extends AppCompatActivity {
                 CURRENT_CARD--;
                 if(CURRENT_CARD < 0) {
                     CURRENT_CARD = NoDB.CARDS.size()-1;
+                    Collections.shuffle(NoDB.CARDS);
                 }
                 CardKeyFragment.CURRENT_CARD = CURRENT_CARD;
                 CardValueFragment.CURRENT_CARD = CURRENT_CARD;
