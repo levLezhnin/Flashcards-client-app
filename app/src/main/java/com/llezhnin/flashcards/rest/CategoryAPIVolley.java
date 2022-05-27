@@ -72,9 +72,42 @@ public class CategoryAPIVolley implements CategoryAPI {
         requestQueue.add(request);
     }
 
-    @Override
-    public void addCategoryToFavourites(int category_id) {
+    public void addCategoryToFavouritesFromFavourites(int category_id) {
 
+        boolean isCategoryIdNew = true;
+
+        NoDB.CATEGORIES.clear();
+        new FlashcardsAPIVolley(context).fill();
+
+        for (Category c : NoDB.CATEGORIES) {
+            if(c.getId() == category_id) {
+                isCategoryIdNew = false;
+                break;
+            }
+        }
+        if(isCategoryIdNew) {
+
+            RequestQueue requestQueue = Volley.newRequestQueue(context);
+
+            String url = this.url + "/user/" + user_id + "/add_to_favourites/" + category_id;
+
+            StringRequest request = new StringRequest(
+                    Request.Method.POST,
+                    url,
+                    response -> {
+                        Log.d(API_TEST + "added to fav", response);
+                        new FlashcardsAPIVolley(context).fill();
+                    },
+                    errorListener
+            );
+
+            requestQueue.add(request);
+        } else {
+            new FlashcardsAPIVolley(context).fill();
+        }
+    }
+
+    public void addCategoryToFavouritesFromAll(int category_id) {
         boolean isCategoryIdNew = true;
 
         NoDB.CATEGORIES.clear();
@@ -117,6 +150,13 @@ public class CategoryAPIVolley implements CategoryAPI {
                 url,
                 response -> {
                     Log.d(API_TEST + "addNewCategory ", response);
+                    try {
+                        JSONObject jsonObject = new JSONObject(response);
+                        addCategoryToFavouritesFromFavourites(jsonObject.getInt("id"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    new FlashcardsAPIVolley(context).fill();
                     ((AdapterActivity) context).updateAdapter();
                 },
                 errorListener

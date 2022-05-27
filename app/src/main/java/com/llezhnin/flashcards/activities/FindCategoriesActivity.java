@@ -44,7 +44,7 @@ public class FindCategoriesActivity extends AppCompatActivity implements Adapter
                 if(i == ItemTouchHelper.RIGHT) {
                     new CategoryAPIVolley(
                             FindCategoriesActivity.this
-                    ).addCategoryToFavourites(category.getId());
+                    ).addCategoryToFavouritesFromAll(category.getId());
                 }
             }
         };
